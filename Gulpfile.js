@@ -4,7 +4,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const imagemin = require('gulp-imagemin')
 
 function style() {
-    return gulp.src('./src/style/*.scss')
+    return gulp.src('./source/style/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: 'compressed'
@@ -14,7 +14,7 @@ function style() {
 }
 
 function images() {
-    return gulp.src('./src/imgs/*.png')
+    return gulp.src('./source/imgs/*.png')
     .pipe(imagemin())
     .pipe(gulp.dest('./build/imgs'))
 }
@@ -22,5 +22,5 @@ function images() {
 exports.default = gulp.parallel(style, images)
 
 exports.watch = function() {
-    gulp.watch('./src/style/*.scss', gulp.series(style, images))
+    gulp.watch('./source/style/*.scss', gulp.series(style, images))
 }
