@@ -1,0 +1,57 @@
+.header {
+    background: linear-gradient(180deg, #363636, #000);
+    
+    .container {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        img {
+            max-width: 152px;
+            margin: 32px 0 32px 64px;
+            cursor: pointer;
+        }
+
+        .menu {
+            // padding-right: 32px;
+            &__list {
+                display: flex;
+
+                &__item {
+                    margin-right: 155px;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 5px;
+
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        background-color: #eee;
+                        transition: width .3s ease-in-out;
+                        -webkit-transition: width .3s ease-in-out;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        height: 3px;
+                    }
+                }
+                
+                a {
+                    color: #eee;
+                    font-family: mont;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
