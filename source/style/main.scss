@@ -1,4 +1,5 @@
 @use 'header';
+@use 'hero';
 
 * {
     margin: 0;
@@ -9,6 +10,9 @@
 }
 
 .container {
-    max-width: 1024px;
-    margin: 0 auto;
+    // background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../imgs/ben10.jpg);
+    // background-size: cover;
 }
