@@ -1,3 +1,4 @@
+@use 'variables';
 @use 'header';
 @use 'hero';
 
@@ -7,12 +8,18 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    color: variables.$mainColorText;
 }
 
 .container {
-    // background-color: #000;
+    background-color: #000;
     height: 100vh;
     width: 100vw;
-    background-image: url(../imgs/ben10.jpg);
+    // background-image: url(../imgs/ben10.jpg);
     // background-size: cover;
 }
+
+.main {
+    background-color: variables.$mainColorBack;
+}
+
